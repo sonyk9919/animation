@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .underline {
+        position: relative;
+        display: inline-block;
+      }
+      .underline::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        transform: scaleX(0);
+        border: 1px solid rgb(255, 98, 98);
+        transition: transform 0.3s ease-in-out;
+      }
+      .underline:hover:after {
+        transform: scaleX(1);
+      }
+      .underline-left {
+        position: relative;
+        display: inline-block;
+      }
+      .underline-left::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        transform: scaleX(0);
+        border: 1px solid rgb(255, 98, 98);
+        transition: transform 0.3s ease-in-out;
+        transform-origin: 0% 0%;
+      }
+      .underline-left:hover:after {
+        transform: scaleX(1);
+      }
+      .underline-right {
+        position: relative;
+        display: inline-block;
+      }
+      .underline-right::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        transform: scaleX(0);
+        border: 1px solid rgb(255, 98, 98);
+        transition: transform 0.3s ease-in-out;
+        transform-origin: 100% 0%;
+      }
+      .underline-right:hover:after {
+        transform: scaleX(1);
+      }
+    </style>
+    <title>밑 줄</title>
+  </head>
+  <body>
+    <p class="underline-left">안녕하세요 (왼쪽)</p>
+    <p class="underline">안녕하세요 (가운데)</p>
+    <p class="underline-right">안녕하세요 (오른쪽)</p>
+  </body>
+</html>
